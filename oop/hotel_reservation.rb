@@ -2,7 +2,7 @@
 # driver code. 
 # This class represents a hotel reservation.
 
-class HotelReservation
+  class HotelReservation
   attr_accessor :customer_name, :date, :room_number, :amenities
 
   def initialize(reservation_info)
@@ -32,3 +32,56 @@ end
 # The add_a_crib method
 # The add_a_custom_amenity method
 
+hotelreservation = HotelReservation.new(customer_name: "Moise", date: "January 31, 2017", room_number: 12)
+
+answer = hotelreservation.customer_name
+puts answer 
+if answer = "Moise" 
+  puts "PASS!"
+else 
+  puts "F"
+end 
+puts 
+answer = hotelreservation.date
+puts answer 
+if answer = "January 31, 2017"
+  puts "PASS!" 
+else 
+  puts "F" 
+end
+puts
+number = hotelreservation.room_number=(13)
+puts "room_number method returns:"
+puts number 
+if number == 13 
+  puts "Pass!"
+else 
+  puts "F"
+end 
+puts 
+answer = hotelreservation.add_a_fridge[0]
+puts "add_a_fridge method returns:"
+puts answer 
+if answer = "fridge"
+  puts "Pass!"
+else 
+  puts "F"
+end 
+puts
+answer1 = hotelreservation.add_a_crib[1] 
+puts "add_a_crib return:"
+puts answer1 
+if answer1 = "crib"
+  puts "PASS!"
+else 
+  puts "F"
+end 
+puts
+answer2 = hotelreservation.add_a_custom_amenity("WiFi")[2]
+puts "add_a_custom_amenity method returns:"
+puts answer2
+if answer2 = "WiFi"
+  puts "PASS!"
+else 
+  puts "F"
+end
